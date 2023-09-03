@@ -31,4 +31,4 @@ export const movieApi = createApi({
   }),
 });
 
-export const { useGetTopMoviesQuery } = movieApi;
+export const { useGetTopMoviesQuery, useGetTopSeriesQuery } = movieApi;

@@ -2,7 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   background: linear-gradient(270deg, #031d44 0%, #395a7f 100%);
+} */
+.tab-container {
+  display: flex;
+  overflow: hidden;
+  color: white;
+  justify-content: flex-start;
+}
 
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.tab.active {
+  color: #4a90e2;
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% / 3);
+  height: 100%;
+  border-radius: 15px;
+  background-color: rgb(74, 144, 226, 0.4);
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.tab-1:checked ~ .tab-indicator {
+  transform: translateX(0);
+}
+
+.tab-2:checked ~ .tab-indicator {
+  transform: translateX(100%);
+}
+
+.tab-3:checked ~ .tab-indicator {
+  transform: translateX(200%);
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.tab-1:checked ~ .tab-content.tab-1,
+.tab-2:checked ~ .tab-content.tab-2,
+.tab-3:checked ~ .tab-content.tab-3 {
+  display: block;
 }
