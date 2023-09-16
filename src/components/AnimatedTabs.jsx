@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import {
   setSerie,
   setMovie,
-  setStreaming,
+  setTrending,
 } from "../redux/features/tabAnimationSlice";
 
 function AnimatedTabs() {
@@ -16,8 +16,8 @@ function AnimatedTabs() {
     dispatch(setMovie());
   };
 
-  const handleSetStreaming = () => {
-    dispatch(setStreaming());
+  const handleSetTrending = () => {
+    dispatch(setTrending());
   };
 
   return (
@@ -33,14 +33,14 @@ function AnimatedTabs() {
         <input type="radio" id="tab-2" name="tabs" className="hidden tab-2" />
         <input type="radio" id="tab-3" name="tabs" className="hidden tab-3" />
 
-        <label htmlFor="tab-1" className="tab" onClick={handleSetSerie}>
+        <label htmlFor="tab-1" className="tab" onClick={handleSetTrending}>
+          Trending
+        </label>
+        <label htmlFor="tab-2" className="tab" onClick={handleSetSerie}>
           TV Series
         </label>
-        <label htmlFor="tab-2" className="tab" onClick={handleSetMovie}>
+        <label htmlFor="tab-3" className="tab" onClick={handleSetMovie}>
           Movies
-        </label>
-        <label htmlFor="tab-3" className="tab" onClick={handleSetStreaming}>
-          Streaming
         </label>
 
         <div className="tab-indicator"></div>

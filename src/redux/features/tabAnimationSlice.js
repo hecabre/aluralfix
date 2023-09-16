@@ -5,7 +5,7 @@ export const tabAnimationSlice = createSlice({
   initialState: [
     { name: "Series", clicked: true },
     { name: "Movies", clicked: false },
-    { name: "Streaming", clicked: false },
+    { name: "Trending", clicked: false },
   ],
   reducers: {
     setSerie: (state, action) => {
@@ -20,7 +20,7 @@ export const tabAnimationSlice = createSlice({
       });
       state[1].clicked = true;
     },
-    setStreaming: (state, action) => {
+    setTrending: (state, action) => {
       state.forEach((tab) => {
         tab.clicked = false;
       });
@@ -30,4 +30,4 @@ export const tabAnimationSlice = createSlice({
 });
 
 export default tabAnimationSlice.reducer;
-export const { setMovie, setSerie, setStreaming } = tabAnimationSlice.actions;
+export const { setMovie, setSerie, setTrending } = tabAnimationSlice.actions;

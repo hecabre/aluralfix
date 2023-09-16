@@ -21,7 +21,7 @@ function CarouselParallax({ data, children }) {
         }}
         navigation={true}
         modules={[Parallax, Pagination, Navigation]}
-        className="mySwiper h-1/2"
+        className="mySwiper h-1/2 overflow-y-hidden"
         data-swiper-parallax="-100%"
       >
         {data.map((movie, i) => (

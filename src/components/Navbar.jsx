@@ -1,7 +1,5 @@
 import { useState } from "react";
 import {
-  AiFillLinkedin,
-  AiFillGithub,
   AiOutlineClose,
   AiOutlineBars,
 } from "react-icons/ai";
@@ -41,8 +39,9 @@ function Navbar() {
           />
         )}
 
-        <AiFillLinkedin className="text-2xl cursor-pointer hidden md:block lg:block" />
-        <AiFillGithub className="text-2xl cursor-pointer hidden md:block lg:block " />
+        <p className="text-md bg-[#102c53] px-7 py-2 rounded-full opacity-80 cursor-pointer hidden md:block lg:block font-nunito">
+          Login
+        </p>
       </div>
 
       <div

@@ -9,13 +9,13 @@ function Carousel({ children }) {
   return (
     <>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={40}
-        speed={600}
+        slidesPerView={2}
+        spaceBetween={10}
+        speed={900}
         freeMode={true}
         navigation={true}
         modules={[Parallax, Pagination, Navigation]}
-        className="mySwiper h-1/2"
+        className="mySwiper h-auto"
       >
         {children}
       </Swiper>

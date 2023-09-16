@@ -28,7 +28,25 @@ export const movieApi = createApi({
       }),
       transformResponse: (response) => response.results,
     }),
+    getTrending: builder.query({
+      query: () => ({
+        url: `/trending/all/day?language=en-US`,
+        method: "GET",
+      }),
+      transformResponse: (response) => response.results,
+    }),
+    getSearchMovie: builder.query({
+      query: ({ name }) => ({
+        url: `/search/movie?query=${name}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useGetTopMoviesQuery, useGetTopSeriesQuery } = movieApi;
+export const {
+  useGetTopMoviesQuery,
+  useGetTopSeriesQuery,
+  useGetTrendingQuery,
+  useGetSearchMovieQuery,
+} = movieApi;
